@@ -12,6 +12,8 @@ body {
 .nav__list {
   display: flex;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav__link {
@@ -25,36 +27,37 @@ body {
   justify-content: center;
 }
 
-.nav__link:hover {
+.nav__link:hover,
+.is-active {
   color: var(--blue);
 }
 
-.nav__link.is-active::after {
+.is-active::after {
   background-color: var(--blue);
   content: '';
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  height: 2px;
+  height: 4px;
+  border-radius: 4px;
   width: 100%;
-  display: block;
 }
 
 .nav__item:not(:last-child) {
-  margin-right: 32px;
+  margin-right: 20px;
 }
 
 .logo__img {
   height: 40px;
   width: 40px;
-  margin-left: 50px;
+  display: block;
 }
 
 .header {
   background-color: #fff;
   align-items: center;
-  width: 100%;
   display: flex;
   justify-content: space-between;
+  padding: 0 50px;
 }
